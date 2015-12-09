@@ -79,7 +79,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  for (var i = _devices2.default.length - 1; i >= 0; i--) {
 	    var device = _devices2.default[i];
-	    if (device.width === width && device.height === height && device.dppx === dppx) {
+	    if (device.width === width && device.height === height || device.width === height && device.height === width && device.dppx === dppx) {
 	      return device;
 	    }
 	  }
@@ -101,6 +101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 320,
 			"height": 480,
 			"diagonal": 3.5,
+			"frame": 0.1,
 			"ppi": 163,
 			"dppx": 1
 		},
@@ -109,6 +110,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 640,
 			"height": 960,
 			"diagonal": 3.5,
+			"frame": 0.1,
 			"ppi": 326,
 			"dppx": 2
 		},
@@ -117,6 +119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 640,
 			"height": 1136,
 			"diagonal": 4,
+			"frame": 0.1,
 			"ppi": 326,
 			"dppx": 2
 		},
@@ -125,6 +128,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 750,
 			"height": 1334,
 			"diagonal": 4.7,
+			"frame": 0.1,
 			"ppi": 326,
 			"dppx": 2
 		},
@@ -133,6 +137,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1080,
 			"height": 1980,
 			"diagonal": 5.5,
+			"frame": 0.1,
 			"ppi": 401,
 			"dppx": 2.46
 		},
@@ -141,6 +146,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1024,
 			"height": 768,
 			"diagonal": 7.9,
+			"frame": 0.1,
 			"ppi": 163,
 			"dppx": 1
 		},
@@ -149,6 +155,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 2048,
 			"height": 1536,
 			"diagonal": 7.9,
+			"frame": 0.1,
 			"ppi": 326,
 			"dppx": 2
 		},
@@ -157,6 +164,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1024,
 			"height": 768,
 			"diagonal": 9.7,
+			"frame": 0.1,
 			"ppi": 132,
 			"dppx": 1
 		},
@@ -165,6 +173,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 2048,
 			"height": 1536,
 			"diagonal": 9.7,
+			"frame": 0.1,
 			"ppi": 264,
 			"dppx": 2
 		},
@@ -173,6 +182,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 2048,
 			"height": 1536,
 			"diagonal": 9.7,
+			"frame": 0.1,
 			"ppi": 264,
 			"dppx": 2
 		},
@@ -181,6 +191,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 2048,
 			"height": 1536,
 			"diagonal": 9.7,
+			"frame": 0.1,
 			"ppi": 264,
 			"dppx": 2
 		},
@@ -189,6 +200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1280,
 			"height": 720,
 			"diagonal": 4.65,
+			"frame": 0.1,
 			"ppi": 316,
 			"dppx": 2
 		},
@@ -197,6 +209,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1280,
 			"height": 768,
 			"diagonal": 4.7,
+			"frame": 0.1,
 			"ppi": 320,
 			"dppx": 2
 		},
@@ -205,6 +218,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1920,
 			"height": 1080,
 			"diagonal": 4.95,
+			"frame": 0.1,
 			"ppi": 445,
 			"dppx": 3
 		},
@@ -213,6 +227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 2560,
 			"height": 1440,
 			"diagonal": 5.96,
+			"frame": 0.1,
 			"ppi": 493,
 			"dppx": 3
 		},
@@ -221,6 +236,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 2560,
 			"height": 1600,
 			"diagonal": 10.055,
+			"frame": 0.1,
 			"ppi": 300,
 			"dppx": 2
 		},
@@ -229,6 +245,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1080,
 			"height": 1920,
 			"diagonal": 4.7,
+			"frame": 0.1,
 			"ppi": 468,
 			"dppx": 3
 		},
@@ -236,13 +253,17 @@ return /******/ (function(modules) { // webpackBootstrap
 			"name": "HTC One Max",
 			"width": 1080,
 			"height": 1920,
-			"diagonal": 5.9
+			"diagonal": 5.9,
+			"frame": 0.1,
+			"ppi": 468,
+			"dppx": 3
 		},
 		{
 			"name": "Motorola Moto G",
 			"width": 720,
 			"height": 1280,
 			"diagonal": 4.5,
+			"frame": 0.1,
 			"ppi": 326,
 			"dppx": 2
 		},
@@ -251,6 +272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 720,
 			"height": 1280,
 			"diagonal": 4.7,
+			"frame": 0.1,
 			"ppi": 312,
 			"dppx": 2
 		},
@@ -259,6 +281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1280,
 			"height": 720,
 			"diagonal": 4.8,
+			"frame": 0.1,
 			"ppi": 306,
 			"dppx": 2
 		},
@@ -267,6 +290,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1920,
 			"height": 1080,
 			"diagonal": 5,
+			"frame": 0.1,
 			"ppi": 441,
 			"dppx": 3
 		},
@@ -275,6 +299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1920,
 			"height": 1080,
 			"diagonal": 5.1,
+			"frame": 0.1,
 			"ppi": 432,
 			"dppx": 3
 		},
@@ -283,6 +308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 768,
 			"height": 1280,
 			"diagonal": 4.5,
+			"frame": 0.1,
 			"ppi": 432,
 			"dppx": 1.6667
 		},
@@ -291,6 +317,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 768,
 			"height": 1280,
 			"diagonal": 4.5,
+			"frame": 0.1,
 			"ppi": 332,
 			"dppx": 1.6667
 		},
@@ -299,6 +326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 768,
 			"height": 1280,
 			"diagonal": 4.5,
+			"frame": 0.1,
 			"ppi": 332,
 			"dppx": 1.6667
 		},
@@ -307,6 +335,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1080,
 			"height": 1920,
 			"diagonal": 5.5,
+			"frame": 0.1,
 			"ppi": 401,
 			"dppx": 2
 		},
@@ -315,6 +344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1440,
 			"height": 2560,
 			"diagonal": 5.1,
+			"frame": 0.1,
 			"ppi": 577,
 			"dppx": 4
 		},
@@ -323,6 +353,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 720,
 			"height": 1280,
 			"diagonal": 4.8,
+			"frame": 0.1,
 			"ppi": 306,
 			"dppx": 2
 		},
@@ -331,6 +362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 480,
 			"height": 800,
 			"diagonal": 4.3,
+			"frame": 0.1,
 			"ppi": 217,
 			"dppx": 2
 		},
@@ -339,6 +371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 480,
 			"height": 800,
 			"diagonal": 4,
+			"frame": 0.1,
 			"ppi": 233,
 			"dppx": 1
 		},
@@ -347,6 +380,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1080,
 			"height": 1920,
 			"diagonal": 5.2,
+			"frame": 0.1,
 			"ppi": 424,
 			"dppx": 3
 		},
@@ -355,6 +389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1440,
 			"height": 2560,
 			"diagonal": 5.5,
+			"frame": 0.1,
 			"ppi": 538,
 			"dppx": 3
 		},
@@ -363,6 +398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			"width": 1440,
 			"height": 2560,
 			"diagonal": 5.5,
+			"frame": 0.1,
 			"ppi": 538,
 			"dppx": 3
 		}

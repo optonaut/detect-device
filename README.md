@@ -32,3 +32,26 @@ console.log(iPhone5)
 console.log(devices)
 // ... lists all available devices
 ```
+
+### Device Properties
+
+#### `name`
+Description of the device. Includes vendor and model.
+
+#### `height`
+Absolute height of device screen in pixel.
+
+#### `height`
+Absolute height of device screen in pixel.
+
+#### `diagonal`
+Diagonal screen size in inch.
+
+#### `frame`
+Distance between screen and device body in inch. (`deviceWidthInInch` - `screenWidthInInch`) / 2 = `frame`.
+
+#### `ppi`
+Points per inch. [Read more](https://en.wikipedia.org/wiki/Pixel_density).
+
+#### `dppx`
+Scaling factor. Sometimes also called "retina".

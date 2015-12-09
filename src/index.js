@@ -10,7 +10,7 @@ export function detect(options = {}) {
 
   for (let i = devices.length - 1; i >= 0; i--) {
     const device = devices[i]
-    if (device.width === width && device.height === height && device.dppx === dppx) {
+    if ((device.width === width && device.height === height) || (device.width === height && device.height === width) && device.dppx === dppx) {
       return device
     }
   }
