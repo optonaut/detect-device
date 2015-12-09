@@ -3,6 +3,7 @@ module.exports = {
   output: {
     path: './dist',
     library: 'DetectDevice',
+    libraryTarget: 'umd',
     filename: 'detect-device.js',
     publicPath: '/'
   },
