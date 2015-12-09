@@ -1,5 +1,5 @@
 # `detect-device`
-Detects the (mobile) device used based on screen dimensions (width+height) and DPI
+Detects (mobile) device used based on screen dimensions (width, height, dppx). Includes list of all devices.
 
 ## Demo
 
@@ -19,7 +19,15 @@ import { detect, devices } = 'detect-devices'
 
 const detectedDevice = detect()
 console.log(detectedDevice)
-\\ { "name": "Apple iPhone 6", "w": 750, "h": 1334, "d": 4.7, "ppi": 326, "dppx": 2 }
+\\ { "name": "Apple iPhone 6", "width": 750, "height": 1334, "diagonal": 4.7, "ppi": 326, "dppx": 2 }
+
+const iPhone5 = detect({
+  width: 640,
+  height: 1136,
+  dppx: 2
+})
+console.log(iPhone5)
+\\ { "name": "Apple iPhone 5", "width": 640, "height": 1136, "diagonal": 4, "ppi": 326, "dppx": 2 }
 
 console.log(devices)
 // ... lists all available devices

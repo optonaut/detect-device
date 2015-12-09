@@ -2,7 +2,7 @@
   "name": "detect-device",
   "version": "0.0.0",
   "description": "Detects the (mobile) device used based on screen dimensions (width+height) and DPI",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "prebuild": "npm install",
     "build": "webpack -p"
