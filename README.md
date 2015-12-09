@@ -1,4 +1,4 @@
-# `detect-device`
+# detect-device
 Detects (mobile) device used based on screen dimensions (width, height, dppx). Includes list of all devices.
 
 ## Demo
