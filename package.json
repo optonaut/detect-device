@@ -1,6 +1,6 @@
 {
   "name": "detect-device",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "Detects the (mobile) device used based on screen dimensions (width+height) and DPI",
   "main": "dist/detect-device.js",
   "scripts": {
